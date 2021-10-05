@@ -1,16 +1,16 @@
 <h2 class="text-center mb-3">Liste des apprenants</h2>
-<?php if(count($learners) > 0): ?>
+<?php if(count($tabLearners) > 0): ?>
     <table class="table mb-3 text-center">
         <thead class="table-dark">
         <td>Nom</td>
         <td>Prénom</td>
         <td>Date de naissance</td>
         </thead>
-        <?php foreach($learners as $learner):?>
+        <?php foreach($tabLearners as $Learner):?>
             <tr>
-                <td><?php echo $learner["name"] ?></td>
-                <td><?php echo $learner["firstName"] ?></td>
-                <td><?php echo $learner["dateOfBirth"] ?></td>
+                <td><?php echo $Learner->getName() ?></td>
+                <td><?php echo $Learner->getFirstName() ?></td>
+                <td><?php echo $Learner->getDateOfBirth() ?></td>
             </tr>
         <?php endforeach; ?>
     </table>

@@ -2,27 +2,27 @@
 	require_once("models/TrainerModel.php");
 
 	$trainerDavigoDelphine = new Trainers('DAVIGO', 'Delphine', 'Inconnue');
-	echo $trainerDavigoDelphine->getName();
+	/*echo $trainerDavigoDelphine->getName();
 	echo $trainerDavigoDelphine->getFirstName();
-	echo $trainerDavigoDelphine->getCompany();
+	echo $trainerDavigoDelphine->getCompany();*/
 
 	$trainerPezetPierre = new Trainers('PEZET', 'Pierre', 'Gaido');
-	echo $trainerPezetPierre->getName();
+	/*echo $trainerPezetPierre->getName();
 	echo $trainerPezetPierre->getFirstName();
-	echo $trainerPezetPierre->getCompany();
+	echo $trainerPezetPierre->getCompany();*/
 
 	$trainerChevalierThomas = new Trainers('CHEVALIER', 'Thomas', 'Inconnue');
-	echo $trainerChevalierThomas->getName();
+	/*echo $trainerChevalierThomas->getName();
 	echo $trainerChevalierThomas->getFirstName();
-	echo $trainerChevalierThomas->getCompany();
+	echo $trainerChevalierThomas->getCompany();*/
 
 	$trainerPoncinCindy = new Trainers('PONCIN', 'Cindy', 'Kyü Solutions');
-	echo $trainerPoncinCindy->getName();
+	/*echo $trainerPoncinCindy->getName();
 	echo $trainerPoncinCindy->getFirstName();
-	echo $trainerPoncinCindy->getCompany();
+	echo $trainerPoncinCindy->getCompany();*/
 
-	/*$trainer = new Trainers();
-	$trainers = $trainer->getListTrainers();
-	var_dump($trainers);*/
+	//var_dump($trainers);
 
-	//include("views/trainersList.php");
+	$tabTrainers = array($trainerDavigoDelphine, $trainerChevalierThomas, $trainerPezetPierre, $trainerPoncinCindy);
+
+	include("views/trainersList.php");

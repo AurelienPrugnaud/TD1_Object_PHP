@@ -2,58 +2,58 @@
 	require_once("models/LearnerModel.php");
 
 	$learnerPrugnaudAurelien = new Learners('PRUGNAUD', 'Aurélien', '1992');
-	echo $learnerPrugnaudAurelien->getName();
+	/*echo $learnerPrugnaudAurelien->getName();
 	echo $learnerPrugnaudAurelien->getFirstName();
-	echo $learnerPrugnaudAurelien->getDateOfBirth();
+	echo $learnerPrugnaudAurelien->getDateOfBirth();*/
 
 	$learnerBenSalemBassam = new Learners('BEN SALEM', 'Bassam', '1990');
-	echo $learnerBenSalemBassam->getName();
+	/*echo $learnerBenSalemBassam->getName();
 	echo $learnerBenSalemBassam->getFirstName();
-	echo $learnerBenSalemBassam->getDateOfBirth();
+	echo $learnerBenSalemBassam->getDateOfBirth();*/
 
 	$learnerRossiChristophe = new Learners('ROSSI', 'Christophe', '1980');
-	echo $learnerRossiChristophe->getName();
+	/*echo $learnerRossiChristophe->getName();
 	echo $learnerRossiChristophe->getFirstName();
-	echo $learnerRossiChristophe->getDateOfBirth();
+	echo $learnerRossiChristophe->getDateOfBirth();*/
 
 	$learnerPreteDoryan = new Learners('PRÊTE', 'Doryan', '1991');
-	echo $learnerPreteDoryan->getName();
+	/*echo $learnerPreteDoryan->getName();
 	echo $learnerPreteDoryan->getFirstName();
-	echo $learnerPreteDoryan->getDateOfBirth();
+	echo $learnerPreteDoryan->getDateOfBirth();*/
 
 	$learnerPetitElie = new Learners('PETIT', 'Elie', '1985');
-	echo $learnerPetitElie->getName();
+	/*echo $learnerPetitElie->getName();
 	echo $learnerPetitElie->getFirstName();
-	echo $learnerPetitElie->getDateOfBirth();
+	echo $learnerPetitElie->getDateOfBirth();*/
 
 	$learnerChastelFrancois = new Learners('CHASTEL', 'François', '1995');
-	echo $learnerChastelFrancois->getName();
+	/*echo $learnerChastelFrancois->getName();
 	echo $learnerChastelFrancois->getFirstName();
-	echo $learnerChastelFrancois->getDateOfBirth();
+	echo $learnerChastelFrancois->getDateOfBirth();*/
 
 	$learnerMilletGuillaume = new Learners('MILLET', 'Guillaume', '1992');
-	echo $learnerMilletGuillaume->getName();
+	/*echo $learnerMilletGuillaume->getName();
 	echo $learnerMilletGuillaume->getFirstName();
-	echo $learnerMilletGuillaume->getDateOfBirth();
+	echo $learnerMilletGuillaume->getDateOfBirth();*/
 
 	$learnerDeValmontLouis = new Learners('DE VALMONT', 'Louis', '1990');
-	echo $learnerDeValmontLouis->getName();
+	/*echo $learnerDeValmontLouis->getName();
 	echo $learnerDeValmontLouis->getFirstName();
-	echo $learnerDeValmontLouis->getDateOfBirth();
+	echo $learnerDeValmontLouis->getDateOfBirth();*/
 
 	$learnerRodriguezMaricel = new Learners('RODRIGUEZ', 'Maricel', '1989');
-	echo $learnerRodriguezMaricel->getName();
+	/*echo $learnerRodriguezMaricel->getName();
 	echo $learnerRodriguezMaricel->getFirstName();
-	echo $learnerRodriguezMaricel->getDateOfBirth();
+	echo $learnerRodriguezMaricel->getDateOfBirth();*/
 
 	$learnerRomeuMarine = new Learners('ROMEU', 'Marine', '1992');
-	echo $learnerRomeuMarine->getName();
+	/*echo $learnerRomeuMarine->getName();
 	echo $learnerRomeuMarine->getFirstName();
-	echo $learnerRomeuMarine->getDateOfBirth();
+	echo $learnerRomeuMarine->getDateOfBirth();*/
 
-	/*$learner = new Learners();
-	$learners = $learner->getListLearners();
-	var_dump($learners);*/
+	$tabLearners = array($learnerBenSalemBassam, $learnerChastelFrancois, $learnerDeValmontLouis, $learnerMilletGuillaume, $learnerPetitElie, $learnerPreteDoryan, $learnerPrugnaudAurelien, $learnerRodriguezMaricel, $learnerRomeuMarine, $learnerRossiChristophe);
 
-	//include("views/learnersList.php");
+	//var_dump($learners);
+
+	include("views/learnersList.php");
 
