@@ -58,6 +58,6 @@
 
 	//var_dump($learners);
 
-	//besoin de cet include sans .htaccess
-	//include("views/learnersList.php");
+	//besoin de cet includes sans .htaccess
+	//includes("views/learnersList.php");
 

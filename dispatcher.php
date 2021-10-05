@@ -26,35 +26,35 @@
 /*	if(!empty($_GET['page'])):
 		switch($_GET['page']):
 			case 'subjectsList':
-				include('controllers/subjectController.php');
+				includes('controllers/subjectController.php');
 				break;
 			case 'trainersList':
-				include('controllers/trainerController.php');
+				includes('controllers/trainerController.php');
 				break;
 			case 'promotionsList':
-				include('controllers/promotionController.php');
+				includes('controllers/promotionController.php');
 				break;
 			case 'learnersList':
-				include('controllers/learnerController.php');
+				includes('controllers/learnerController.php');
 				break;
 			default:
-				include('views/errorPageNotFound.php');
+				includes('views/errorPageNotFoundView.php');
 				break;
 		endswitch;
 	endif;*/
 
 /*    if(!empty($_GET['page']) && $_GET['page']=='subjectsList'):
-		include("controllers/subjectController.php");
+		includes("controllers/subjectController.php");
 	endif;
 
 	if(!empty($_GET['page']) && $_GET['page']=='trainersList'):
-		include("controllers/trainerController.php");
+		includes("controllers/trainerController.php");
 	endif;
 
 	if(!empty($_GET['page']) && $_GET['page']=='promotionsList'):
-		include("controllers/promotionController.php");
+		includes("controllers/promotionController.php");
 	endif;
 
 	if(!empty($_GET['page']) && $_GET['page']=='learnersList'):
-		include("controllers/learnerController.php");
+		includes("controllers/learnerController.php");
 	endif;*/

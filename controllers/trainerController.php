@@ -28,5 +28,5 @@
 	//variable pour l'appel de la liste des formateurs avec .htaccess
 	$list = "trainersList";
 
-	//besoin de cet include sans .htaccess
-	//include("views/trainersList.php");
+	//besoin de cet includes sans .htaccess
+	//includes("views/trainersList.php");

@@ -67,8 +67,8 @@
 	//variable pour l'appel de la liste des étudiants avec .htaccess
 	$list = "subjectsList";
 
-	//besoin de cet include sans .htaccess
-	//include("views/subjectsList.php");
+	//besoin de cet includes sans .htaccess
+	//includes("views/subjectsList.php");
 
 
 

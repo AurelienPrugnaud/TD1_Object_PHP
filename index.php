@@ -27,10 +27,10 @@
             <a href="/promotionsList" class="link-dark" >Liste des promotions</a>
             <a href="/learnersList" class="link-dark" >Liste des apprenants</a>
         </div>
-        <!-- include avec .htaccess-->
+        <!-- includes avec .htaccess-->
         <?php  include("views/".$list.".php"); ?>
-        <!-- include sans .htaccess -->
-        <?php //include("dispatcher.php") ?>
+        <!-- includes sans .htaccess -->
+        <?php //includes("dispatcher.php") ?>
     </main>
 </body>
 </html>

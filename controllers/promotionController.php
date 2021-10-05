@@ -32,5 +32,5 @@
 	//variable pour l'appel de la liste des promotions avec .htaccess
 	$list = 'promotionsList';
 
-	//besoin de cet include sans .htaccess
-	//include("views/promotionsList.php");
+	//besoin de cet includes sans .htaccess
+	//includes("views/promotionsList.php");
