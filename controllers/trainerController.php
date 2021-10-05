@@ -25,4 +25,8 @@
 
 	$tabTrainers = array($trainerDavigoDelphine, $trainerChevalierThomas, $trainerPezetPierre, $trainerPoncinCindy);
 
-	include("views/trainersList.php");
+	//variable pour l'appel de la liste des formateurs avec .htaccess
+	$list = "trainersList";
+
+	//besoin de cet include sans .htaccess
+	//include("views/trainersList.php");

@@ -29,5 +29,8 @@
 
 	$tabPromotions = array($promotionCdaR2, $promotionCdaR19, $promotionDwwmPe1, $promotionDwwmR4);
 
+	//variable pour l'appel de la liste des promotions avec .htaccess
+	$list = 'promotionsList';
 
-	include("views/promotionsList.php");
+	//besoin de cet include sans .htaccess
+	//include("views/promotionsList.php");

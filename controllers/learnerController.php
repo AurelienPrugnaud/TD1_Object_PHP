@@ -53,7 +53,11 @@
 
 	$tabLearners = array($learnerBenSalemBassam, $learnerChastelFrancois, $learnerDeValmontLouis, $learnerMilletGuillaume, $learnerPetitElie, $learnerPreteDoryan, $learnerPrugnaudAurelien, $learnerRodriguezMaricel, $learnerRomeuMarine, $learnerRossiChristophe);
 
+	//variable pour l'appel de la liste des apprenants avec .htaccess
+	$list = "learnersList";
+
 	//var_dump($learners);
 
-	include("views/learnersList.php");
+	//besoin de cet include sans .htaccess
+	//include("views/learnersList.php");
 

@@ -13,14 +13,24 @@
         <?php include("views/includes/header.php"); ?>
     </header>
     <main class="container">
+        <!-- Lien sans .htaccess
         <div class="text-center mb-3">
             <a href="index.php?page=subjectsList" class="link-dark" >Liste des matières</a>
             <a href="index.php?page=trainersList" class="link-dark" >Liste des formateurs</a>
             <a href="index.php?page=promotionsList" class="link-dark" >Liste des promotions</a>
             <a href="index.php?page=learnersList" class="link-dark" >Liste des apprenants</a>
+        </div>-->
+        <!-- lien avec .htaccess -->
+        <div class="text-center mb-3">
+            <a href="/subjectsList" class="link-dark" >Liste des matières</a>
+            <a href="/trainersList" class="link-dark" >Liste des formateurs</a>
+            <a href="/promotionsList" class="link-dark" >Liste des promotions</a>
+            <a href="/learnersList" class="link-dark" >Liste des apprenants</a>
         </div>
-        <!-- si utilisation de la manière .htaccess enlever le include-->
-        <?php  include("dispatcher.php") ?>
+        <!-- include avec .htaccess-->
+        <?php  include("views/".$list.".php"); ?>
+        <!-- include sans .htaccess -->
+        <?php //include("dispatcher.php") ?>
     </main>
 </body>
 </html>

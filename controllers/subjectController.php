@@ -64,7 +64,11 @@
 
 	$tabSubjects = array($subjectAlgorithm, $subjectAngular, $subjectDataBase, $subjectEnglish, $subjectJavascript, $subjectLinux, $subjectMockUp, $subjectScrum, $subjectServerDeployment, $subjectStaticWeb, $subjectPhp);
 
-	include("views/subjectsList.php");
+	//variable pour l'appel de la liste des étudiants avec .htaccess
+	$list = "subjectsList";
+
+	//besoin de cet include sans .htaccess
+	//include("views/subjectsList.php");
 
 
 
