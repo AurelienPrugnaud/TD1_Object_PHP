@@ -20,7 +20,7 @@
             <a href="index.php?page=learnersList" class="link-dark" >Liste des apprenants</a>
         </div>
         <!-- si utilisation de la manière .htaccess enlever le include-->
-        <?php // include("dispatcher.php") ?>
+        <?php  include("dispatcher.php") ?>
     </main>
 </body>
 </html>

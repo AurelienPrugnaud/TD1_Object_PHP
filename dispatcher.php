@@ -1,6 +1,6 @@
 <?php
 	//Manière de faire avec un fichier .htaccess
-	if(!empty($_SERVER['REQUEST_URI'])):
+/*	if(!empty($_SERVER['REQUEST_URI'])):
 		switch($_SERVER['REQUEST_URI']):
 			case '/subjectsList':
 				include('controllers/subjectController.php');
@@ -18,9 +18,9 @@
 				include('views/errorPageNotFound.php');
 				break;
 		endswitch;
-	endif;
+	endif;*/
 //manière de faire sans .htacess
-/*	if(!empty($_GET['page'])):
+	if(!empty($_GET['page'])):
 		switch($_GET['page']):
 			case 'subjectsList':
 				include('controllers/subjectController.php');
@@ -38,7 +38,7 @@
 				include('views/errorPageNotFound.php');
 				break;
 		endswitch;
-	endif;*/
+	endif;
 
 /*    if(!empty($_GET['page']) && $_GET['page']=='subjectsList'):
 		include("controllers/subjectController.php");
