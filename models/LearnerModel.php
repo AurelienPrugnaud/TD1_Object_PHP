@@ -4,8 +4,17 @@
  *
  */
 class Learners {
+	/**
+	 * @var
+	 */
 	private $name;
+	/**
+	 * @var
+	 */
 	private $firstName;
+	/**
+	 * @var
+	 */
 	private $dateOfBirth;
 
 	/**
@@ -22,49 +31,51 @@ class Learners {
 	/**
 	 * @return string
 	 */
-	public function getName()
-	{
+	public function getName() {
 		return $this->name;
 	}
 
 	/**
 	 * @param string $name
 	 */
-	public function setName($name): void
-	{
+	public function setName($name): void {
 		$this->name = $name;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getFirstName()
-	{
+	public function getFirstName() {
 		return $this->firstName;
 	}
 
 	/**
 	 * @param string $firstName
 	 */
-	public function setFirstName($firstName): void
-	{
+	public function setFirstName($firstName): void {
 		$this->firstName = $firstName;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getDateOfBirth()
-	{
+	public function getDateOfBirth() {
 		return $this->dateOfBirth;
 	}
 
 	/**
 	 * @param string $dateOfBirth
 	 */
-	public function setDateOfBirth($dateOfBirth): void
-	{
+	public function setDateOfBirth($dateOfBirth): void {
 		$this->dateOfBirth = $dateOfBirth;
+	}
+
+	/**
+	 * Method addToList fill in the table the learners
+	 * @param $tabLearners
+	 */
+	function addToList(&$tabLearners) {
+		array_push($tabLearners, $this);
 	}
 
 
@@ -74,7 +85,7 @@ class Learners {
 	 *
 	 * @return array
 	 */
-	public function getListLearners() {
+/*	public function getListLearners() {
 			$tabLearners = array(
 				array("name" => "PRUGNAUD", "firstName" => "Aurélien", "dateOfBirth" => "1992"),
 				array("name" => "BEN SALEM", "firstName" => "Bassam", "dateOfBirth" => "1990"),
@@ -89,5 +100,5 @@ class Learners {
 			);
 
 			return $tabLearners;
-		}
+		}*/
 	}

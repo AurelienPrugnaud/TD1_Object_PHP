@@ -4,8 +4,17 @@
  *
  */
 class Trainers {
+	/**
+	 * @var
+	 */
 	private $name;
+	/**
+	 * @var
+	 */
 	private $firstName;
+	/**
+	 * @var
+	 */
 	private $company;
 
 	/**
@@ -30,41 +39,44 @@ class Trainers {
 	/**
 	 * @param mixed $name
 	 */
-	public function setName($name): void
-	{
+	public function setName($name): void {
 		$this->name = $name;
 	}
 
 	/**
 	 * @return mixed
 	 */
-	public function getFirstName()
-	{
+	public function getFirstName() {
 		return $this->firstName;
 	}
 
 	/**
 	 * @param mixed $firstName
 	 */
-	public function setFirstName($firstName): void
-	{
+	public function setFirstName($firstName): void {
 		$this->firstName = $firstName;
 	}
 
 	/**
 	 * @return mixed
 	 */
-	public function getCompany()
-	{
+	public function getCompany() {
 		return $this->company;
 	}
 
 	/**
 	 * @param mixed $company
 	 */
-	public function setCompany($company): void
-	{
+	public function setCompany($company): void {
 		$this->company = $company;
+	}
+
+	/**
+	 * Method addToList fill in the table the trainers
+	 * @param $tabTrainers
+	 */
+	public function addToList(&$tabTrainers) {
+		array_push($tabTrainers, $this);
 	}
 
 
@@ -72,7 +84,7 @@ class Trainers {
 	 * Method allowing all trainers to be included in the Trainers class
 	 * @return array
 	 */
-	public function getListTrainers() {
+/*	public function getListTrainers() {
 			$tabTrainers = array(
 				array("name" => "DAVIGO", "firstName" => "Delphine", "company" => "Inconnue"),
 				array("name" => "PEZET", "firstName" => "Pierre", "company" => "Gaido"),
@@ -81,5 +93,5 @@ class Trainers {
 			);
 
 			return $tabTrainers;
-		}
+		}*/
 	}

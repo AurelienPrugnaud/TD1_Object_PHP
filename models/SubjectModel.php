@@ -4,8 +4,17 @@
  *
  */
 class Subjects {
+	/**
+	 * @var
+	 */
 	private $name;
+	/**
+	 * @var
+	 */
 	private $duration;
+	/**
+	 * @var
+	 */
 	private $description;
 
 	/**
@@ -30,24 +39,21 @@ class Subjects {
 	/**
 	 * @param mixed $name
 	 */
-	public function setName($name): void
-	{
+	public function setName($name): void {
 		$this->name = $name;
 	}
 
 	/**
 	 * @param mixed $duration
 	 */
-	public function setDuration($duration): void
-	{
+	public function setDuration($duration): void {
 		$this->duration = $duration;
 	}
 
 	/**
 	 * @param mixed $description
 	 */
-	public function setDescription($description): void
-	{
+	public function setDescription($description): void {
 		$this->description = $description;
 	}
 
@@ -55,8 +61,7 @@ class Subjects {
 	 * Method getDuration() get the duration
 	 * @return string
 	 */
-	public function getDuration()
-	{
+	public function getDuration() {
 		return $this->duration;
 	}
 
@@ -64,19 +69,29 @@ class Subjects {
 	 * Method getDescription() get the description
 	 * @return string
 	 */
-	public function getDescription()
-	{
+	public function getDescription() {
 		return $this->description;
 	}
 
+	/**
+	 * Method addToList fill in the table the subjects
+	 * @param $tabSubjects
+	 */
+	public function addToList(&$tabSubjects) {
+		//Utilisation du "&" pour récupérer la valeur modifier
+		array_push($tabSubjects, $this);
+		//si pas de "&" dans les paramêtres utilisation de mettre un return
+		//return $tabSubjects;
+	}
 
+}
 
 
 	/**
 	 * Method allowing all subjects to be included in the Subjects class
 	 * @return array
 	 */
-	public function getListSubjects() {
+/*	public function getListSubjects() {
 			$tabSubjects = array(
 				array("name" => "Algorithmique", "duration" => "8", "description" => "Cour d'algorithmique"),
 				array("name" => "Anglais", "duration" => "6", "description" => "Cour d'anglais"),
@@ -94,4 +109,4 @@ class Subjects {
 
 			return $tabSubjects;
 		}
-	}
+	}*/

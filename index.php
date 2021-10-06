@@ -28,7 +28,12 @@
             <a href="/learnersList" class="link-dark" >Liste des apprenants</a>
         </div>
         <!-- includes avec .htaccess-->
-        <?php  include("views/".$list.".php"); ?>
+        <?php
+            if(!empty($list)):
+                include("views/".$list.".php");
+            endif;
+        ?>
+
         <!-- includes sans .htaccess -->
         <?php //includes("dispatcher.php") ?>
     </main>
