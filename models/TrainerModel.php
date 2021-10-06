@@ -31,8 +31,7 @@ class Trainers {
 	/**
 	 * @return mixed
 	 */
-	public function getName()
-	{
+	public function getName() {
 		return $this->name;
 	}
 
@@ -72,12 +71,51 @@ class Trainers {
 	}
 
 	/**
+	 * Method getListTrainers display the table
+	 * @param $tabTrainers
+	 * @return mixed
+	 */
+	public function getListTrainers($tabTrainers) {
+		return $tabTrainers;
+	}
+
+	/**
 	 * Method addToList fill in the table the trainers
 	 * @param $tabTrainers
 	 */
 	public function addToList(&$tabTrainers) {
 		array_push($tabTrainers, $this);
 	}
+
+	/**
+	 * Method deleteToList delete the row in the table
+	 * @param $tabTrainers
+	 */
+	public function deleteToList(&$tabTrainers) {
+		$index = array_search($this, $tabTrainers);
+		unset($tabTrainers[$index]);
+	}
+
+	/**
+	 * Method modifyList allow to modify the table
+	 * @param $tabTrainers
+	 * @param $name
+	 * @param $firstName
+	 * @param $company
+	 */
+	public function modifyList($tabTrainers, $name, $firstName, $company) {
+		$index = array_search($this, $tabTrainers);
+		if(!empty($name)):
+			$tabTrainers[$index]->name = $name;
+		endif;
+		if (!empty($firstName)):
+			$tabTrainers[$index]->firstName = $firstName;
+		endif;
+		if (!empty($company)):
+			$tabTrainers[$index]->dateOfBirth = $company;
+		endif;
+	}
+
 
 
 	/**

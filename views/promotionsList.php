@@ -6,6 +6,7 @@
             <td>Date de début</td>
             <td>Date de fin</td>
             <td>Nombre d'apprenant</td>
+            <td>Actions</td>
         </thead>
         <?php foreach($tabPromotions as $promotion): ?>
             <tr>
@@ -13,7 +14,10 @@
                 <td><?php echo $promotion->getStartDate()?></td>
                 <td><?php echo $promotion->getEndDate()?></td>
                 <td><?php echo $promotion->getNumberOfLearners()?></td>
-            </tr>
+                <td>
+                    <a class="btn btn-warning me-3" href="" title="modify">Modifier</a>
+                    <a class="btn btn-danger" href="" title="delete">Supprimer</a>
+                </td>            </tr>
         <?php endforeach; ?>
     </table>
     <?php else: ?>

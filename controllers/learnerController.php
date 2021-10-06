@@ -73,6 +73,13 @@
 	echo $learnerRomeuMarine->getDateOfBirth();*/
 	$learnerRomeuMarine->addToList($tabLearners);
 
+	//modification d'un élément du tableau
+	//$learnerRomeuMarine->modifyList($tabLearners, 'a', 'a', '1');
+
+	//création d'un objet permettant l'affichage du tableau
+	/*$listLearners = new Learners('', '', '');
+	$tabLearners = $listLearners->getListLearners($tabLearners);*/
+
 
 	//$tabLearners = array($learnerBenSalemBassam, $learnerChastelFrancois, $learnerDeValmontLouis, $learnerMilletGuillaume, $learnerPetitElie, $learnerPreteDoryan, $learnerPrugnaudAurelien, $learnerRodriguezMaricel, $learnerRomeuMarine, $learnerRossiChristophe);
 

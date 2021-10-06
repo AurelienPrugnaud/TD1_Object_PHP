@@ -32,6 +32,13 @@
 	echo $promotionCdaR2->getNumberOfLearners();*/
 	$promotionCdaR2->addToList($tabPromotions);
 
+	//modification d'un élément du tableau
+	//$promotionCdaR2->modifyList($tabPromotions, 'a', 'a', '1', 2);
+
+	//création d'un objet permettant l'affichage du tableau
+	/*$listPromotions = new Promotions('', '', '', '');
+	$tabPromotions = $listPromotions->getListPromotions($tabPromotions);*/
+
 	//var_dump($promotions);
 
 	//$tabPromotions = array($promotionCdaR2, $promotionCdaR19, $promotionDwwmPe1, $promotionDwwmR4);

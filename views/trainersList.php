@@ -5,13 +5,15 @@
             <td>Nom</td>
             <td>Prénom</td>
             <td>Société</td>
+            <td>Actions</td>
 		</thead>
 		<?php foreach($tabTrainers as $trainer): ?>
 			<tr>
 				<td><?php echo $trainer->getName()?></td>
 				<td><?php echo $trainer->getFirstName()?></td>
 				<td><?php echo $trainer->getCompany()?></td>
-			</tr>
+                <td><button class="btn btn-warning me-3">Modifier</button><button class="btn btn-danger">Supprimer</button></td>
+            </tr>
 		<?php endforeach; ?>
 	</table>
 	<?php else: ?>

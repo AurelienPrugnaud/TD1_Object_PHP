@@ -74,8 +74,47 @@ class Learners {
 	 * Method addToList fill in the table the learners
 	 * @param $tabLearners
 	 */
-	function addToList(&$tabLearners) {
+	public function addToList(&$tabLearners) {
 		array_push($tabLearners, $this);
+	}
+
+	/**
+	 * Method getListLearners display the table of learners
+	 * @param $tabLearners
+	 * @return array
+	 */
+	public function getListLearners($tabLearners) {
+		return $tabLearners;
+	}
+
+	/**
+	 * Method deleteToList delete the row in the table
+	 * @param $tabLearners
+	 */
+	public function deleteToList(&$tabLearners) {
+		$index = array_search($this, $tabLearners);
+		//array_splice($tabLearners, $tabLearnes[$index]);
+		unset($tabLearners[$index]);
+	}
+
+	/**
+	 * Method modifyList allows to modify the list
+	 * @param $tabLearners
+	 * @param $name
+	 * @param $firstName
+	 * @param $dateOfBirth
+	 */
+	public function modifyList($tabLearners, $name, $firstName, $dateOfBirth) {
+		$index = array_search($this, $tabLearners);
+		if(!empty($name)):
+			$tabLearners[$index]->name = $name;
+		endif;
+		if (!empty($firstName)):
+			$tabLearners[$index]->firstName = $firstName;
+		endif;
+		if (!empty($dateOfBirth)):
+			$tabLearners[$index]->dateOfBirth = $dateOfBirth;
+		endif;
 	}
 
 

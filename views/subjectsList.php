@@ -5,12 +5,14 @@
             <td>Nom</td>
             <td>Durée</td>
             <td>Description</td>
+            <td>Actions</td>
         </thead>
         <?php foreach($tabSubjects as $subject):?>
             <tr>
                 <td><?php echo $subject->getName() ?></td>
                 <td><?php echo $subject->getDuration() ?></td>
                 <td><?php echo $subject->getDescription() ?></td>
+                <td><button class="btn btn-warning me-3">Modifier</button><button class="btn btn-danger">Supprimer</button></td>
             </tr>
         <?php endforeach; ?>
     </table>

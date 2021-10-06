@@ -73,6 +73,11 @@ class Subjects {
 		return $this->description;
 	}
 
+
+	public function getListSubjects($tabSubjects) {
+		return $tabSubjects;
+	}
+
 	/**
 	 * Method addToList fill in the table the subjects
 	 * @param $tabSubjects
@@ -84,8 +89,34 @@ class Subjects {
 		//return $tabSubjects;
 	}
 
-}
+	/**
+	 * Method deleteToList delete the row in the table
+	 * @param $tabSubjects
+	 */
+	public function deleteToList(&$tabSubjects) {
+		$index = array_search($this, $tabSubjects);
+		unset($tabSubjects[$index]);
+	}
 
+	/**
+	 * Method modifyList allow to modify the table
+	 * @param $tabSubjects
+	 * @param $name
+	 * @param $duration
+	 * @param $description
+	 */
+	public function modifyList($tabSubjects, $name, $duration, $description) {
+		$index = array_search($this, $tabSubjects);
+		if(!empty($name)):
+			$tabSubjects[$index]->name = $name;
+		endif;
+		if (!empty($duration)):
+			$tabSubjects[$index]->firstName = $duration;
+		endif;
+		if (!empty($description)):
+			$tabSubjects[$index]->dateOfBirth = $description;
+		endif;
+	}
 
 	/**
 	 * Method allowing all subjects to be included in the Subjects class
@@ -108,5 +139,5 @@ class Subjects {
 			);
 
 			return $tabSubjects;
-		}
-	}*/
+		}*/
+	}

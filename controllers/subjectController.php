@@ -74,6 +74,13 @@
 	/*$subjectStaticWeb->setName("WEB STATIQUE");
 	echo $subjectStaticWeb->getName();*/
 
+	//modification d'un élément du tableau
+	//$subjectStaticWeb->modifyList($tabSubjects, 'a', 'a', '1');
+
+	//création d'un objet permettant l'affichage du tableau
+	/*$listSubjects = new Subjects('', '', '');
+	$tabSubjects = $listSubjects->getListSubjects($tabSubjects);*/
+
 	//var_dump($subjects);
 
 	//tableau qui contient toutes les matières sans utiliser une method

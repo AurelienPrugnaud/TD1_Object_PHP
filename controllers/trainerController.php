@@ -27,6 +27,13 @@
 	echo $trainerPoncinCindy->getCompany();*/
 	$trainerPoncinCindy->addToList($tabTrainers);
 
+	//modification d'un élément du tableau
+	//$trainerDavigoDelphine->modifyList($tabTrainers, 'a', 'a', 'a');
+
+	//création d'un objet permettant l'affichage du tableau
+	/*$listTrainers = new Trainers('', '', '');
+	$tabTrainers = $listTrainers->getListTrainers($tabTrainers);*/
+
 	//var_dump($trainers);
 
 	//$tabTrainers = array($trainerDavigoDelphine, $trainerChevalierThomas, $trainerPezetPierre, $trainerPoncinCindy);
