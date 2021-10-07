@@ -31,6 +31,8 @@
         <?php
             if(!empty($list)):
                 include("views/".$list.".php");
+            elseif(empty($list)):
+                include("views/errorPageNotFound.php");
             endif;
         ?>
 

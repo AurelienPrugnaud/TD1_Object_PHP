@@ -1,25 +1,32 @@
 <?php
 	//Manière de faire avec un fichier .htaccess
-	if(!empty($_SERVER['REQUEST_URI'])):
-		switch($_SERVER['REQUEST_URI']):
-			case '/subjectsList':
+	$tabParamUrl = explode('/', $_SERVER['REQUEST_URI'] );
+	//début du tableau à l'index 1.
+	if(!empty($tabParamUrl[1])):
+		switch($tabParamUrl[1]):
+			case 'subjectsList':
 				include('controllers/subjectController.php');
 				break;
-			case '/trainersList':
+			case 'subjectDelete':
+				include('controllers/subjectDeleteController.php');
+				break;
+			case 'subjectModify':
+				include('controllers/subjectModifyController.php');
+				break;
+			case 'trainersList':
 				include('controllers/trainerController.php');
 				break;
-			case '/promotionsList':
+			case 'promotionsList':
 				include('controllers/promotionController.php');
 				break;
-			case '/learnersList':
+			case 'learnersList':
 				include('controllers/learnerController.php');
 				break;
 			default:
-				include('views/errorPageNotFound.php');
+				include('controllers/default.php');
 				break;
 		endswitch;
 	endif;
-
 	include("index.php");
 
 //manière de faire sans .htacess

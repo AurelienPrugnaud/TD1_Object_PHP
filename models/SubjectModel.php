@@ -74,8 +74,21 @@ class Subjects {
 	}
 
 
+	/**
+	 * @param $tabSubjects
+	 * @return mixed
+	 */
 	public function getListSubjects($tabSubjects) {
 		return $tabSubjects;
+	}
+
+	/**
+	 * @param $tabSubjects
+	 * @param $index
+	 * @return mixed
+	 */
+	public function getListSubjectsByIndex($tabSubjects, $index) {
+		return $tabSubjects[$index];
 	}
 
 	/**
@@ -99,6 +112,14 @@ class Subjects {
 	}
 
 	/**
+	 * @param array $tabSubjects
+	 * @param int $index
+	 */
+	public function deleteSubjectFromIndex(&$tabSubjects, $index){
+		unset($tabSubjects[$index]);
+	}
+
+	/**
 	 * Method modifyList allow to modify the table
 	 * @param $tabSubjects
 	 * @param $name
@@ -111,10 +132,29 @@ class Subjects {
 			$tabSubjects[$index]->name = $name;
 		endif;
 		if (!empty($duration)):
-			$tabSubjects[$index]->firstName = $duration;
+			$tabSubjects[$index]->duration = $duration;
 		endif;
 		if (!empty($description)):
-			$tabSubjects[$index]->dateOfBirth = $description;
+			$tabSubjects[$index]->description = $description;
+		endif;
+	}
+
+	/**
+	 * @param $tabSubjects
+	 * @param $index
+	 * @param $name
+	 * @param $duration
+	 * @param $description
+	 */
+	public function modifySubjectByIndex(&$tabSubjects, $index, $name, $duration, $description) {
+		if(!empty($name)):
+			$tabSubjects[$index]->name = $name;
+		endif;
+		if (!empty($duration)):
+			$tabSubjects[$index]->duration = $duration;
+		endif;
+		if (!empty($description)):
+			$tabSubjects[$index]->description = $description;
 		endif;
 	}
 

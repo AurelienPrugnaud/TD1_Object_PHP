@@ -7,12 +7,15 @@
             <td>Description</td>
             <td>Actions</td>
         </thead>
-        <?php foreach($tabSubjects as $subject):?>
+        <?php foreach($tabSubjects as $index => $subject)  : ?>
             <tr>
                 <td><?php echo $subject->getName() ?></td>
-                <td><?php echo $subject->getDuration() ?></td>
+                <td><?php echo $subject->getDuration() ?> heures</td>
                 <td><?php echo $subject->getDescription() ?></td>
-                <td><button class="btn btn-warning me-3">Modifier</button><button class="btn btn-danger">Supprimer</button></td>
+                <td>
+                    <a href="/subjectModify/<?php echo $index ?>" title="modifier" class="btn btn-warning me-3">Modifier</a>
+                    <a href="/subjectDelete/<?php echo $index ?>" title="supprimer" class="btn btn-danger">Supprimer</a>
+                </td>
             </tr>
         <?php endforeach; ?>
     </table>
