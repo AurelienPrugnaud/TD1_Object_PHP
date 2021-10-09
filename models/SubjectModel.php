@@ -87,7 +87,7 @@ class Subjects {
 	 * @param $index
 	 * @return mixed
 	 */
-	public function getListSubjectsByIndex($tabSubjects, $index) {
+	public function getSubjectByIndex($tabSubjects, $index) {
 		return $tabSubjects[$index];
 	}
 

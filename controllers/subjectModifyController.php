@@ -46,7 +46,7 @@
 	endif;
 
 	if(isset($tabParamUrl) && isset($tabParamUrl[2]) && $tabParamUrl[2]>=0):
-		$subjectToModify = $subjectToModify->getListSubjectsByIndex($tabSubjects, $tabSubjects['index']);
+		$subjectToModify = $subjectToModify->getSubjectByIndex($tabSubjects, $tabSubjects['index']);
 	endif;
 
 	$list = "subjectModify";

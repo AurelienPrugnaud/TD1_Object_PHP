@@ -31,7 +31,7 @@ class Trainers {
 	/**
 	 * @return mixed
 	 */
-	public function getName() {
+	public function getName(){
 		return $this->name;
 	}
 
@@ -80,6 +80,15 @@ class Trainers {
 	}
 
 	/**
+	 * @param $tabTrainers
+	 * @param $index
+	 * @return mixed
+	 */
+	public function getTrainerByIndex($tabTrainers, $index){
+		return $tabTrainers[$index];
+	}
+
+	/**
 	 * Method addToList fill in the table the trainers
 	 * @param $tabTrainers
 	 */
@@ -93,6 +102,14 @@ class Trainers {
 	 */
 	public function deleteToList(&$tabTrainers) {
 		$index = array_search($this, $tabTrainers);
+		unset($tabTrainers[$index]);
+	}
+
+	/**
+	 * @param $tabTrainers
+	 * @param $index
+	 */
+	public function deleteTrainerFromIndex(&$tabTrainers, $index){
 		unset($tabTrainers[$index]);
 	}
 
@@ -112,7 +129,26 @@ class Trainers {
 			$tabTrainers[$index]->firstName = $firstName;
 		endif;
 		if (!empty($company)):
-			$tabTrainers[$index]->dateOfBirth = $company;
+			$tabTrainers[$index]->company = $company;
+		endif;
+	}
+
+	/**
+	 * @param $tabTrainers
+	 * @param $index
+	 * @param $name
+	 * @param $firstName
+	 * @param $company
+	 */
+	public function modifyTrainerByIndex($tabTrainers, $index, $name, $firstName, $company){
+		if(!empty($name)):
+			$tabTrainers[$index]->name = $name;
+		endif;
+		if(!empty($firstName)):
+			$tabTrainers[$index]->firstName = $firstName;
+		endif;
+		if(!empty($company)):
+			$tabTrainers[$index]->company = $company;
 		endif;
 	}
 

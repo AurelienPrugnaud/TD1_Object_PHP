@@ -7,12 +7,15 @@
             <td>Société</td>
             <td>Actions</td>
 		</thead>
-		<?php foreach($tabTrainers as $trainer): ?>
+		<?php foreach($tabTrainers as $index => $trainer): ?>
 			<tr>
 				<td><?php echo $trainer->getName()?></td>
 				<td><?php echo $trainer->getFirstName()?></td>
 				<td><?php echo $trainer->getCompany()?></td>
-                <td><button class="btn btn-warning me-3">Modifier</button><button class="btn btn-danger">Supprimer</button></td>
+                <td>
+                    <a href="/trainerModify/<?php echo $index ?>" title="modifier" class="btn btn-warning me-3">Modifier</a>
+                    <a href="/trainerDelete/<?php echo  $index?>" title="supprimer" class="btn btn-danger">Supprimer</a>
+                </td>
             </tr>
 		<?php endforeach; ?>
 	</table>

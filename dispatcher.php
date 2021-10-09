@@ -16,6 +16,12 @@
 			case 'trainersList':
 				include('controllers/trainerController.php');
 				break;
+			case 'trainerDelete':
+				include('controllers/trainerDeleteController.php');
+				break;
+			case 'trainerModify':
+				include('controllers/trainerModifyController.php');
+				break;
 			case 'promotionsList':
 				include('controllers/promotionController.php');
 				break;
