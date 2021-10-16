@@ -95,7 +95,15 @@ class Promotions {
 	 * @param $tabPromotions
 	 * @return mixed
 	 */
-	public function getListPromotions($tabPromotions) {
+	public function getListPromotions($tabPromotions, $index) {
+		return $tabPromotions[$index];
+	}
+
+	/**
+	 * @param $tabPromotions
+	 * @return mixed
+	 */
+	public function getPromotionByIndex($tabPromotions){
 		return $tabPromotions;
 	}
 
@@ -116,6 +124,13 @@ class Promotions {
 		unset($tabPromotions[$index]);
 	}
 
+	/**
+	 * @param $tabPromotions
+	 * @param $index
+	 */
+	public function deletePromotionFromIndex(&$tabPromotions, $index) {
+		unset($tabPromotions[$index]);
+	}
 
 	/**
 	 * Method modifyList allows to modify the table
@@ -131,13 +146,36 @@ class Promotions {
 			$tabPromotions[$index]->name = $name;
 		endif;
 		if (!empty($startDate)):
-			$tabPromotions[$index]->firstName = $startDate;
+			$tabPromotions[$index]->statDate = $startDate;
 		endif;
 		if (!empty($endDate)):
-			$tabPromotions[$index]->dateOfBirth = $endDate;
+			$tabPromotions[$index]->endDate = $endDate;
 		endif;
 		if (!empty($numberOfLearner)):
-			$tabPromotions[$index]->dateOfBirth = $numberOfLearner;
+			$tabPromotions[$index]->numberOfLearner = $numberOfLearner;
+		endif;
+	}
+
+	/**
+	 * @param $tabPromotion
+	 * @param $index
+	 * @param $name
+	 * @param $startDate
+	 * @param $endDate
+	 * @param $numberOfLearner
+	 */
+	public function modifyPromotionByIndex($tabPromotion, $index, $name, $startDate, $endDate, $numberOfLearner){
+		if(!empty($name)):
+			$tabPromotion[$index]->name = $name;
+		endif;
+		if(!empty($startDate)):
+			$tabPromotion[$index]->startDate = $startDate;
+		endif;
+		if(!empty($endDate)):
+			$tabPromotion[$index]->endDate = $endDate;
+		endif;
+		if(!empty($numberOfLearner)):
+			$numberOfLearner[$index]->numberOfLearner = $numberOfLearner;
 		endif;
 	}
 

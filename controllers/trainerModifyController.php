@@ -2,7 +2,7 @@
 	require_once("models/TrainerModel.php");
 
 	$tabTrainers = array();
-
+	
 	$trainerDavigoDelphine = new Trainers('DAVIGO', 'Delphine', 'Inconnue');
 	$trainerDavigoDelphine->addToList($tabTrainers);
 

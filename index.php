@@ -37,7 +37,7 @@
         ?>
 
         <!-- includes sans .htaccess -->
-        <?php //includes("dispatcher.php") ?>
+        <?php //include("dispatcher.php") ?>
     </main>
 </body>
 </html>

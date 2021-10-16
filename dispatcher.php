@@ -25,6 +25,12 @@
 			case 'promotionsList':
 				include('controllers/promotionController.php');
 				break;
+			case 'promotionDelete':
+				include('controllers/promotionDeleteController.php');
+				break;
+			case 'promotionModify':
+				include('controllers/promotionModifyController.php');
+				break;
 			case 'learnersList':
 				include('controllers/learnerController.php');
 				break;
